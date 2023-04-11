@@ -4,7 +4,19 @@
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
 
+<center>
+    <a href="https://en.wikipedia.org/wiki/Wombat" target="_blank"><img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="./wombat.png"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Wombats are adorable little creatures native to Australia. The first three pictures are generated from Stable Diffusion.</div>
+</center>
+
 **License Notices**:  The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
+
 
 ## Overview
 
@@ -83,16 +95,6 @@ To produce a more general purpose language model chatbot, we introduce **Wombat*
 We reuse the query from Alpaca training data, and sample responses from Alpaca, LLaMA, chatGPT and text-davinci-003.
 We acquire quality assessments of responses from chatGPT, and train Alpace with RRHF to become a 'Wombat'.
 
-<center>
-    <a href="https://en.wikipedia.org/wiki/Wombat" target="_blank"><img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./wombat.png"></a>
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">Wombats are adorable little creatures native to Australia. The first three pictures are generated from Stable Diffusion.</div>
-</center>
 
 **An generated introduction of wombats by our 'Wombat':**
 
