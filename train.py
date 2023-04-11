@@ -153,12 +153,14 @@ class ScoreDataset(Dataset):
     def __getitem__(self, i):
         return dict(input_ids=self.data[i])
 
-def _single_tokenize(text, tokenizer):
+def _single_tokenize(text, tokenizer, max_len=None):
+    if max_len is None:
+        max_len = tokenizer.model_max_length
     toked = tokenizer(
             text,
             return_tensors="pt",
             padding="longest",
-            max_length=tokenizer.model_max_length,
+            max_length=max_len,
             truncation=True,
         )
     return toked['input_ids'][0]
@@ -201,7 +203,7 @@ class DataCollatorForSupervisedDataset(object):
                     r = stop_response(res)
                 else:
                     r = res
-                res_input_ids = _single_tokenize(r + self.tokenizer.eos_token, self.tokenizer) # eos here
+                res_input_ids = _single_tokenize(r + self.tokenizer.eos_token, self.tokenizer, max_len=512-query_input_ids.shape[0]) # eos here
                 input_ids.append(torch.cat((query_input_ids, res_input_ids), dim=0))
                 labels.append(torch.cat((query_target, res_input_ids, dummy_target), dim=0))
 
