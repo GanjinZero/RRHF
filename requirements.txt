@@ -1,0 +1,5 @@
+numpy
+sentencepiece
+tokenizers==0.12.1
+datasets
+wandb

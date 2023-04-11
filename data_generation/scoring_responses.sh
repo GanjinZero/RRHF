@@ -1,0 +1,9 @@
+export FILE_PATH=$1
+CUDA_VISIBLE_DEVICES=7 nohup python scoring_responses.py $FILE_PATH/beam4_0.txt $FILE_PATH/scored_beam4_0.txt &
+CUDA_VISIBLE_DEVICES=6 nohup python scoring_responses.py $FILE_PATH/beam4_1.txt $FILE_PATH/scored_beam4_1.txt &
+CUDA_VISIBLE_DEVICES=5 nohup python scoring_responses.py $FILE_PATH/beam4_2.txt $FILE_PATH/scored_beam4_2.txt &
+CUDA_VISIBLE_DEVICES=4 nohup python scoring_responses.py $FILE_PATH/beam4_3.txt $FILE_PATH/scored_beam4_3.txt &
+CUDA_VISIBLE_DEVICES=3 nohup python scoring_responses.py $FILE_PATH/beam4_4.txt $FILE_PATH/scored_beam4_4.txt &
+CUDA_VISIBLE_DEVICES=2 nohup python scoring_responses.py $FILE_PATH/beam4_5.txt $FILE_PATH/scored_beam4_5.txt &
+CUDA_VISIBLE_DEVICES=1 nohup python scoring_responses.py $FILE_PATH/beam4_6.txt $FILE_PATH/scored_beam4_6.txt &
+CUDA_VISIBLE_DEVICES=0 nohup python scoring_responses.py $FILE_PATH/beam4_7.txt $FILE_PATH/scored_beam4_7.txt &
