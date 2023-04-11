@@ -26,7 +26,7 @@ With a much simplier training paradigm, we found that RRHF can achieve slightly 
 | Alpaca | RRHF    | *14.75*   | **-1.02** |
 
 
-For details, please refer to our [paper](RRHF.pdf). RRHF is still working in progress, and there are still limitations in this preliminary study.
+For details, please refer to our [paper](rrhf.pdf). RRHF is still working in progress, and there are still limitations in this preliminary study.
 Due to the large cost of human evaluation, we experiment on the HH datasets and use a trained reward model *Dahoas/gptj-rm-static* trained by [Dahoas](https://github.com/Dahoas/reward-modeling.git). 
 The reward model plays a role of a synthetic human feedback and the experiments is a proof-of-concept for RRHF.
 We are open to any suggestions and discussions and feel free to contact us through yuanzheng.yuanzhen@alibaba-inc.com or yuanhy20@mails.tsinghua.edu.cn.
@@ -111,7 +111,7 @@ bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_j
 
 ## Citation
 
-For more informations, you can refer to our [paper](./paper/rrhf.pdf), the arxiv version is on the way, stay tuned.
+For more informations, you can refer to our [paper](rrhf.pdf), the arxiv version is on the way, stay tuned.
 
 ## Acknowledgements
 
