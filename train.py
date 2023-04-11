@@ -203,7 +203,7 @@ class DataCollatorForSupervisedDataset(object):
                     r = stop_response(res)
                 else:
                     r = res
-                res_input_ids = _single_tokenize(r + self.tokenizer.eos_token, self.tokenizer, max_len=512-query_input_ids.shape[0]) # eos here
+                res_input_ids = _single_tokenize(r + self.tokenizer.eos_token, self.tokenizer, max_len=self.tokenizer.model_max_length-query_input_ids.shape[0]) # eos here
                 input_ids.append(torch.cat((query_input_ids, res_input_ids), dim=0))
                 labels.append(torch.cat((query_target, res_input_ids, dummy_target), dim=0))
 
