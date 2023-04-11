@@ -16,7 +16,7 @@ Our motivation is to simplifiy the alignment between language models with human 
 It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
 
 In our preliminary experiments, we compare RRHF and PPO using 7B LLaMA [1] and Alpaca [2] models on Anthropic’s Helpful and Harmless (HH) [3] dataset. We evaluate the results by perplexity (PPL) and reward model scores (Reward). 
-With a much simplier training paradigm, we found that RRHF can achieve slightly better result than PPO in terms of generation fluency (PPL) and alignements (Reward).
+With a much simplier training paradigm, we found that RRHF perform comparable result with PPO in terms of generation fluency (PPL) and alignements (Reward).
 
 | Models| Setting  | PPL       | Reward    |
 |--------|---------|-----------|-----------|
