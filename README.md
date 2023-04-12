@@ -41,7 +41,7 @@ With a much simplier training paradigm, we found that RRHF perform comparable re
 For details, please refer to our [paper](rrhf.pdf). RRHF is still working in progress, and there are still limitations in this preliminary study.
 Due to the large cost of human evaluation, we experiment on the HH datasets and use a trained reward model *Dahoas/gptj-rm-static* trained by [Dahoas](https://github.com/Dahoas/reward-modeling.git). 
 The reward model plays a role of a synthetic human feedback and the experiments is a proof-of-concept for RRHF.
-We are open to any suggestions and discussions and feel free to contact us through yuanzheng.yuanzhen@alibaba-inc.com or yuanhy20@mails.tsinghua.edu.cn.
+We are open to any suggestions and discussions and feel free to contact us through yuanzheng.yuanzhen@alibaba-inc.com, yuanhy20@mails.tsinghua.edu.cn or chuanqi.tcq@alibaba-inc.com.
 
 [1]: LLaMA: Open and Efficient Foundation Language Models. Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample. https://arxiv.org/abs/2302.13971v1
 
