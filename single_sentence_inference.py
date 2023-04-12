@@ -12,7 +12,7 @@ device = "cuda:7"
 model = transformers.AutoModelForCausalLM.from_pretrained(path)
 
 tokenizer = transformers.AutoTokenizer.from_pretrained(
-    '/nas-alinlp/zheng/llama/llama_hf/llama-7b',
+    path,
     padding_side="left", # for batch decode
     use_fast=False,
 )
