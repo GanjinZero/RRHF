@@ -113,7 +113,14 @@ bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_j
 
 ## Citation
 
-For more informations, you can refer to our [paper](rrhf.pdf), the arxiv version is on the way, stay tuned.
+@misc{yuan2023rrhf,
+      title={RRHF: Rank Responses to Align Language Models with Human Feedback without tears}, 
+      author={Zheng Yuan and Hongyi Yuan and Chuanqi Tan and Wei Wang and Songfang Huang and Fei Huang},
+      year={2023},
+      eprint={2304.05302},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 
 ## Acknowledgements
 
