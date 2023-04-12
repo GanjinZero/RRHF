@@ -112,7 +112,7 @@ bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_j
 ```
 
 ## Citation
-
+```
 @misc{yuan2023rrhf,
       title={RRHF: Rank Responses to Align Language Models with Human Feedback without tears}, 
       author={Zheng Yuan and Hongyi Yuan and Chuanqi Tan and Wei Wang and Songfang Huang and Fei Huang},
@@ -121,6 +121,7 @@ bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_j
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
+```
 
 ## Acknowledgements
 
