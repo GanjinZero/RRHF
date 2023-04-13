@@ -4,11 +4,11 @@
 Alibaba DAMO Academy, Tsinghua University
 
 **Model date**  
-Wombat-7B was trained in 
-Wombat-7B-GPT4 was trained in 
+Wombat-7B was released at 2023/04/13.
+Wombat-7B-GPT4 was released in 2023/04/13.
 
 **Model version**  
-This is version 1 for Wombat-7B and Wombat-7B-GPT4.
+Wombat-7B & Wombat-7B-GPT4.
 
 **Training dataset**  
 The training data of Wombat-7B and Wombat-7B-GPT4 is released in the [RRHF](https://github.com/GanjinZero/RRHF) and [GPT-4-LLM](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM) respectively.
@@ -20,18 +20,19 @@ We use a novel methods named RRHF (Rank Response to align Human Feedback) to fin
 **How to use**
 To recover Wombats from delta parameters:  
 ```bash 
+python apply_delta.py \
+    --base ./llama-7b \
+    --target ./wombat-7b \
+    --delta GanjinZero/wombat-7b-delta
 
+python apply_delta.py \
+    --base ./llama-7b \
+    --target ./wombat-7b-gpt4 \
+    --delta GanjinZero/wombat-7b-gpt4-delta
 ```
+where **apply_delta.py** is from [code](https://github.com/GanjinZero/RRHF/blob/main/apply_delta.py).
 
-To inference with Wombats:
-```bash
-
-```
-
-To fine-tune Wombats with RRHF:
-```bash
-
-```
+To inference with Wombats: Please refer to [code](https://github.com/GanjinZero/RRHF/blob/main/single_sentence_inference.py).
 
 **Citations details**  
 Please cite our paper on Arxiv:
