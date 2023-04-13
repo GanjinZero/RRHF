@@ -22,7 +22,7 @@
 
 ## Overview
 
-This is the repository for RRHF (**R**ank **R**esponse to align **H**uman **F**eedback). RRHF helps align large language models with human perference easier. 
+This is the repository for RRHF (**R**ank **R**esponse to align **H**uman **F**eedback) and open-sourced language models Wombat. RRHF helps align large language models with human perference easier. 
 
 Reinforcement learning from human feedback (RLHF) enables the alignment of large language models with human preferences, which can extremely improve the quality of interactions between humans and language models.
 Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters.
