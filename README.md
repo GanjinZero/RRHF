@@ -63,7 +63,7 @@ We are open to any suggestions and discussions and feel free to contact us throu
 
 [3]: HH: Training a helpful and harmless assistant with reinforcement learning from human feedback. Yuntao Bai, Andy Jones, Kamal Ndousse, Amanda Askell, Anna Chen, Nova DasSarma, Dawn Drain, Stanislav Fort, Deep Ganguli, Tom Henighan, et al. https://arxiv.org/abs/2204.05862
 
-## Setting Up
+## Setting Up Environment
 
 To set up, you can use the following command lines to set up python3.8 and pytorch requirements:
 ```bash
@@ -80,7 +80,14 @@ Install other packages:
 pip install -r requirements.txt
 ``` 
 
-## Data Generation
+## Train Alpaca with RRHF on Helpful and Harmless dataset
+We use Helpful and Harmless dataset to compare PPO and RRHF. We use trained reward function from [Dahoas/gptj-rm-static](https://huggingface.co/Dahoas/gptj-rm-static).
+
+| Models         | Initial Checkpoint | Sampling Models         | Reward Score | 
+| -------------- | ------------------ | ----------------------- | ------------ | 
+| Alpaca-7B-RRHF      | Alpaca-7B          | Alpaca-7B, responses from HH dataset  | Dahoas/gptj-rm-static      |
+
+### Data Generation
 
 RRHF firstly samples responses for each query in the training data from the initial models, and then scores each response (including the 'chosen' and 'rejected' response in orginal HH labels) using the reward models.
 
@@ -92,7 +99,7 @@ bash response_gen.sh <path_to_alpaca/hf_llama_directory> <path_to_data_directory
 
 We also release our generated data for the ease of RRHF training implementation through [this link](https://drive.google.com/file/d/1nAfBt0ldSy7m5O-Sgt05SQ1rK__NmC2Z/view?usp=sharing). After download, place it to <path_to_data_directory>.
 
-## Training with RRHF
+### Training with RRHF
 
 You can train your own model with generated or released datasets using the script [train.sh](./train.sh), please note that the training process requires 8*A100 80GB GPUs, bf16 and FSDP.
 In the future, we will try efficient training methods such as LoRA or Prefix-tuning or Adapter to lower the computational resource requirements.
