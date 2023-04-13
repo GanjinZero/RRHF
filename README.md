@@ -7,7 +7,7 @@
 <center>
     <a href="https://en.wikipedia.org/wiki/Wombat" target="_blank"><img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./wombat.png"></a>
+    src="./assets/wombat.png"></a>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -22,7 +22,7 @@
 
 ## Overview
 
-This is the repository for RRHF (**R**ank **R**esponse from **H**uman **F**eedback). RRHF helps align large language models with human perference easier. 
+This is the repository for RRHF (**R**ank **R**esponse to align **H**uman **F**eedback). RRHF helps align large language models with human perference easier. 
 
 Reinforcement learning from human feedback (RLHF) enables the alignment of large language models with human preferences, which can extremely improve the quality of interactions between humans and language models.
 Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters.
@@ -33,7 +33,7 @@ It is simpler than PPO from the aspects of coding, model counts, and hyperparame
 <center>
     <a target="_blank"><img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./comparison_of_workflow.png"></a>
+    src="./assets/comparison_of_workflow.png"></a>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -52,7 +52,7 @@ With a much simplier training paradigm, we found that RRHF perform comparable re
 | Alpaca | RRHF    | *14.75*   | **-1.02** |
 
 
-For details, please refer to our [paper](rrhf.pdf). RRHF is still working in progress, and there are still limitations in this preliminary study.
+For details, please refer to our [paper](./assets/rrhf.pdf) on [Arxiv](https://arxiv.org/pdf/2304.05302v1.pdf). RRHF is still working in progress, and there are still limitations in this preliminary study.
 Due to the large cost of human evaluation, we experiment on the HH datasets and use a trained reward model *Dahoas/gptj-rm-static* trained by [Dahoas](https://github.com/Dahoas/reward-modeling.git). 
 The reward model plays a role of a synthetic human feedback and the experiments is a proof-of-concept for RRHF.
 We are open to any suggestions and discussions and feel free to contact us through yuanzheng.yuanzhen@alibaba-inc.com, yuanhy20@mails.tsinghua.edu.cn or chuanqi.tcq@alibaba-inc.com.
