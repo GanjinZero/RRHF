@@ -27,6 +27,18 @@ Recent practice of RLHF uses PPO to enable the large language model optimization
 Our motivation is to simplifiy the alignment between language models with human preference, and our proposed paradigm RRHF (**R**ank **R**esponse from **H**uman **F**eedback) can achieve such alignment as easily as conventional fine-tuning.
 It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
 
+
+<center>
+    <a target="_blank"><img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="./comparison_of_workflow.png"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Overview of workflow comparison between PPO and RRHF.</div>
+</center>
+
 In our preliminary experiments, we compare RRHF and PPO using 7B LLaMA [1] and Alpaca [2] models on Anthropic’s Helpful and Harmless (HH) [3] dataset. We evaluate the results by perplexity (PPL) and reward model scores (Reward). 
 With a much simplier training paradigm, we found that RRHF perform comparable result with PPO in terms of generation fluency (PPL) and alignements (Reward).
 
