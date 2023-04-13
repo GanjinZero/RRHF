@@ -109,8 +109,8 @@ To produce a more general purpose language model chatbot, we introduce **Wombat*
 
 | Models         | Initial Checkpoint | Sampling Models         | Reward Score | Delta Weights |
 | -------------- | ------------------ | ----------------------- | ------------ | ------------- |
-| Wombat-7B      | Alpaca-7B          | ChatGPT, LLaMA, Alpaca  | ChatGPT      |[GanjinZero/wombat-7b-delta](https://huggingface.co/GanjinZero/wombat-7b-gpt4)|
-| Wombat-7B-GPT4 | Alpaca-7B          | GPT-4, GPT-3.5, OPT-IML | GPT-4        |[GanjinZero/wombat-7b-gpt4-delta](https://huggingface.co/GanjinZero/wombat-7b-gpt4)|
+| Wombat-7B      | Alpaca-7B          | ChatGPT, LLaMA, Alpaca  | ChatGPT      |[GanjinZero/wombat-7b-delta](https://huggingface.co/GanjinZero/wombat-7b-delta)|
+| Wombat-7B-GPT4 | Alpaca-7B          | GPT-4, GPT-3.5, OPT-IML | GPT-4        |[GanjinZero/wombat-7b-gpt4-delta](https://huggingface.co/GanjinZero/wombat-7b-gpt4-delta)|
 
 ### Weights
 You should obtain LLaMa weights follow [link](https://huggingface.co/docs/transformers/main/model_doc/llama).
