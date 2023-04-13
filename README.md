@@ -17,6 +17,8 @@
 
 **License Notices**:  The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
 
+## Update:
+-  2023/4/13 We have released the weights of Wombat - LLaMA on huggingface. One can recover Wombat weights based on it.
 
 ## Overview
 
@@ -105,10 +107,14 @@ bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_j
 
 To produce a more general purpose language model chatbot, we introduce **Wombat** to the model zoo of open-resourced language models. We are reseraching on how to realsese the model weights now.
 
-| Models         | Initial Checkpoint | Sampling Models         | Reward Score |
-| -------------- | ------------------ | ----------------------- | ------------ |
-| Wombat-7B      | Alpaca-7B          | ChatGPT, LLaMA, Alpaca  | ChatGPT      |
-| Wombat-7B-GPT4 | Alpaca-7B          | GPT-4, GPT-3.5, OPT-IML | GPT-4        |
+| Models         | Initial Checkpoint | Sampling Models         | Reward Score | Delta Weights |
+| -------------- | ------------------ | ----------------------- | ------------ | ------------- |
+| Wombat-7B      | Alpaca-7B          | ChatGPT, LLaMA, Alpaca  | ChatGPT      |[GanjinZero/wombat-7b-delta](https://huggingface.co/GanjinZero/wombat-7b-gpt4)|
+| Wombat-7B-GPT4 | Alpaca-7B          | GPT-4, GPT-3.5, OPT-IML | GPT-4        |[GanjinZero/wombat-7b-gpt4-delta](https://huggingface.co/GanjinZero/wombat-7b-gpt4)|
+
+### Weights
+You should obtain LLaMa weights follow [link](https://huggingface.co/docs/transformers/main/model_doc/llama).
+And you can use our provided scripts **recover_wombat_7b.sh** to recover origin Wombat weights. 
 
 ### Data and Training
 
