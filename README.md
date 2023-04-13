@@ -57,12 +57,6 @@ Due to the large cost of human evaluation, we experiment on the HH datasets and 
 The reward model plays a role of a synthetic human feedback and the experiments is a proof-of-concept for RRHF.
 We are open to any suggestions and discussions and feel free to contact us through yuanzheng.yuanzhen@alibaba-inc.com, yuanhy20@mails.tsinghua.edu.cn or chuanqi.tcq@alibaba-inc.com.
 
-[1]: LLaMA: Open and Efficient Foundation Language Models. Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample. https://arxiv.org/abs/2302.13971v1
-
-[2]: Stanford alpaca: An instruction-following llama model. Rohan Taori, Ishaan Gulrajani, Tianyi Zhang, Yann Dubois, Xuechen Li, Carlos Guestrin, Percy Liang, and Tatsunori B. Hashimoto. https://github.com/tatsu-lab/stanford_alpaca
-
-[3]: HH: Training a helpful and harmless assistant with reinforcement learning from human feedback. Yuntao Bai, Andy Jones, Kamal Ndousse, Amanda Askell, Anna Chen, Nova DasSarma, Dawn Drain, Stanislav Fort, Deep Ganguli, Tom Henighan, et al. https://arxiv.org/abs/2204.05862
-
 ## Setting Up Environment
 
 To set up, you can use the following command lines to set up python3.8 and pytorch requirements:
@@ -165,3 +159,11 @@ bash ./train_wombat7b_gpt4.sh <path_to_alpaca_directory> <save_path_directory> <
 
 Our implementation and experiments are based on the codes from [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and [trlX](https://github.com/CarperAI/trlx), we appreciate their open-resourced codes and [LLaMA](https://arxiv.org/abs/2302.13971v1) to promote democratized NLP research, expecially for large lanague models.
 We thank Tianhang Zhu to help collecting the data and constructive discussions.
+
+## Ref
+[1]: LLaMA: Open and Efficient Foundation Language Models. Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample. https://arxiv.org/abs/2302.13971v1
+
+[2]: Stanford alpaca: An instruction-following llama model. Rohan Taori, Ishaan Gulrajani, Tianyi Zhang, Yann Dubois, Xuechen Li, Carlos Guestrin, Percy Liang, and Tatsunori B. Hashimoto. https://github.com/tatsu-lab/stanford_alpaca
+
+[3]: HH: Training a helpful and harmless assistant with reinforcement learning from human feedback. Yuntao Bai, Andy Jones, Kamal Ndousse, Amanda Askell, Anna Chen, Nova DasSarma, Dawn Drain, Stanislav Fort, Deep Ganguli, Tom Henighan, et al. https://arxiv.org/abs/2204.05862
+
