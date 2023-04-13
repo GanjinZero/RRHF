@@ -18,7 +18,7 @@
 **License Notices**:  The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
 
 ## Update:
--  2023/4/13 We have released the weights of Wombat - LLaMA on huggingface. One can recover Wombat weights based on it.
+-  2023/4/13 We have released the weights of Wombat - LLaMA on Hugging Face. One can recover Wombat weights based on it.
 
 ## Overview
 
@@ -70,7 +70,7 @@ To set up, you can use the following command lines to set up python3.8 and pytor
 conda create -n rrhf python=3.8
 pip install torch==1.13.0+cu116 torchvision==0.14.0+cu116 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu116
 ```
-Then install Huggingface's transformers from the github repo for LLaMA models. 
+Then install Hugging Face's transformers from the github repo for LLaMA models. 
 ```bash
 git clone https://github.com/huggingface/transformers.git
 pip install -e ./transformers
