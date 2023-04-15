@@ -158,7 +158,7 @@ bash ./train_wombat7b_gpt4.sh <path_to_alpaca_directory> <save_path_directory> <
 ## Acknowledgements
 
 Our implementation and experiments are based on the codes from [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) and [trlX](https://github.com/CarperAI/trlx), we appreciate their open-resourced codes and [LLaMA](https://arxiv.org/abs/2302.13971v1) to promote democratized NLP research, expecially for large lanague models.
-We thank Tianhang Zhu to help collecting the data and constructive discussions.
+We thank Tianhang Zhu to help collecting the data and constructive discussions, and we thank Shengxuan Luo and Keming Lu for helping evaluation.
 
 ## Ref
 [1]: LLaMA: Open and Efficient Foundation Language Models. Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample. https://arxiv.org/abs/2302.13971v1
