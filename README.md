@@ -19,6 +19,7 @@
 
 ## Update:
 -  2023/4/13 We have released the weights of Wombat - LLaMA on Hugging Face. One can recover Wombat weights based on it.
+-  2023/4/15 We add comparison with Alpaca-7B and ChatGPT based on Vicuna test set.
 
 ## Overview
 
@@ -112,6 +113,14 @@ To produce a more general purpose language model chatbot, we introduce **Wombat*
 | -------------- | ------------------ | ----------------------- | ------------ | ----------------------------------------------------------------------------------------- |
 | Wombat-7B      | Alpaca-7B          | ChatGPT, LLaMA, Alpaca  | ChatGPT      | [GanjinZero/wombat-7b-delta](https://huggingface.co/GanjinZero/wombat-7b-delta)           |
 | Wombat-7B-GPT4 | Alpaca-7B          | GPT-4, GPT-3.5, OPT-IML | GPT-4        | [GanjinZero/wombat-7b-gpt4-delta](https://huggingface.co/GanjinZero/wombat-7b-gpt4-delta) |
+
+### Comparison based on Vicuna test set
+| Model A | Score A | Score B | Model B|
+| -------| -------| -------| -------|
+| Alpaca-7B | 567|616|Wombat-7B|
+| ChatGPT| 669 | 548|Wombat-7B|
+
+Math and programming skill are weak for all-LLaMA-7B based models.
 
 ### Weights
 You should obtain LLaMa weights follow [link](https://huggingface.co/docs/transformers/main/model_doc/llama).
