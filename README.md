@@ -107,7 +107,7 @@ bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_j
 
 ### Introduction
 
-To produce a more general purpose language model chatbot, we introduce **Wombat** to the model zoo of open-resourced language models. We are reseraching on how to realsese the model weights now.
+To produce a more general purpose language model chatbot, we introduce **Wombat** to the model zoo of open-resourced language models.
 
 | Models         | Initial Checkpoint | Sampling Models         | Reward Score | Delta Weights                                                                             |
 | -------------- | ------------------ | ----------------------- | ------------ | ----------------------------------------------------------------------------------------- |
