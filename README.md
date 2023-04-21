@@ -103,6 +103,11 @@ In the future, we will try efficient training methods such as LoRA or Prefix-tun
 bash ./train.sh <path_to_alpaca_directory> <save_path_directory> <path_to_data_json>
 ```
 
+If you only have one A100, please try
+```bash
+--fsdp "full_shard auto_wrap offload"
+```
+
 ## Wombat: build your own chatbot
 
 ### Introduction
