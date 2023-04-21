@@ -118,7 +118,10 @@ To produce a more general purpose language model chatbot, we introduce **Wombat*
 | Model A | Score A | Score B | Model B|
 | -------| -------| -------| -------|
 | Alpaca-7B | 567|616|Wombat-7B|
+| Alpaca-7B-ChatGPT | 574 | 612 |Wombat-7B|
 | ChatGPT| 669 | 548|Wombat-7B|
+
+Alpaca-7B-ChatGPT is initialized by LLaMA and trained use prompt from Alpaca and responses from ChatGPT.
 
 Math and programming skill are weak for all-LLaMA-7B based models.
 
