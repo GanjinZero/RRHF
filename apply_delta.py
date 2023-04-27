@@ -2,7 +2,7 @@
 From fastchat
 Apply the delta weights on top of a base model.
 Usage:
-python apply_delta.py --base ~/model_weights/llama-13b --target ~/model_weights/wombat-7b --delta GanjinZero/wombat-7b-delta
+python apply_delta.py --base ~/model_weights/llama-7b --target ~/model_weights/wombat-7b --delta GanjinZero/wombat-7b-delta
 """
 import argparse
 
