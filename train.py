@@ -264,7 +264,7 @@ class RRHFTrainer(Trainer):
         # 每个task的response个数均相同
         cand = rw_scores.shape[1]
         logit_label_batch = torch.reshape(logit_label, (-1, cand, logit_label.shape[-1]))  # batch * cand * L
-        expert_response_logit_label = logit_label_batch[:1, max_idx].squeeze() # batch * L
+        expert_response_logit_label = torch.gather(logit_label_batch, dim=1, index=max_idx.view(-1, 1, 1).repeat(1, 1, logit_label_batch.size(-1))).squeeze() # batch * L
         return -torch.sum(expert_response_logit_label.mean())
 
     def compute_loss(self, model, inputs, return_outputs=False):
