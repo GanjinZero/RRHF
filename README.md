@@ -1,6 +1,8 @@
 
 # Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way
 
+[Arxiv](https://arxiv.org/pdf/2304.05302v1.pdf)
+
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
 
