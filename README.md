@@ -1,7 +1,7 @@
 
 # Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way
 
-[Arxiv](https://arxiv.org/pdf/2304.05302v1.pdf)
+[Arxiv](https://arxiv.org/pdf/2304.05302.pdf)
 
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
@@ -22,6 +22,7 @@
 ## Update:
 -  2023/4/13 We have released the weights of Wombat - LLaMA on Hugging Face. One can recover Wombat weights based on it.
 -  2023/4/15 We add comparison with Alpaca-7B and ChatGPT based on Vicuna test set.
+-  2023/5/23 We update our paper for more discussions and experiments.
 
 ## Overview
 
