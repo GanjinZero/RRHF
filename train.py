@@ -246,14 +246,26 @@ class RRHFTrainer(Trainer):
         return scores
 
     def rrhf_loss(self, scores, idxs, rw_scores):
-        diff = scores.unsqueeze(0) - scores.unsqueeze(-1) # b * b
-        rw_diff = rw_scores.unsqueeze(0) - rw_scores.unsqueeze(-1) # b * b
-        aval = torch.bitwise_and(rw_diff > 0, diff < 0)[0]
+        # diff = scores.unsqueeze(0) - scores.unsqueeze(-1) # b * b
+        # #print(rw_scores)
+        # rw_diff = rw_scores.unsqueeze(0) - rw_scores.unsqueeze(-1) # b * b  # batch * cand
+        # aval = torch.bitwise_and(rw_diff > 0, diff < 0)[0]
+        # return -diff[aval].sum()
+
+        cand = rw_scores.shape[1]
+        new_scores = scores.reshape(-1, cand)   # batch * cand
+        diff = new_scores.unsqueeze(1) - new_scores.unsqueeze(-1) # batch * cand * cand
+        rw_diff = rw_scores.unsqueeze(1) - rw_scores.unsqueeze(-1)
+        aval = torch.bitwise_and(rw_diff > 0, diff < 0)
         return -diff[aval].sum()
 
-    def sft_loss(self, logit_label, idxs, rw_scores):
-        max_idx = torch.argmax(rw_scores)
-        return -logit_label[max_idx].mean()
+    def sft_loss(self, logit_label, idxs, rw_scores): #  (batch * cand) *L
+        max_idx = torch.argmax(rw_scores, dim=1)  # batch
+        # 每个task的response个数均相同
+        cand = rw_scores.shape[1]
+        logit_label_batch = torch.reshape(logit_label, (-1, cand, logit_label.shape[-1]))  # batch * cand * L
+        expert_response_logit_label = torch.gather(logit_label_batch, dim=1, index=max_idx.view(-1, 1, 1).repeat(1, 1, logit_label_batch.size(-1))).squeeze() # batch * L
+        return -torch.sum(expert_response_logit_label.mean())
 
     def compute_loss(self, model, inputs, return_outputs=False):
         if self.args.only_use_provide:
