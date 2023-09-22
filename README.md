@@ -23,6 +23,7 @@
 -  2023/4/13 We have released the weights of Wombat - LLaMA on Hugging Face. One can recover Wombat weights based on it.
 -  2023/4/15 We add comparison with Alpaca-7B and ChatGPT based on Vicuna test set.
 -  2023/5/23 We update our paper for more discussions and experiments.
+-  2023/9/22 Paper accepted by NIPS 2023!
 
 ## Overview
 
